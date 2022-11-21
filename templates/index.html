@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 1200px;
+            margin:200px auto;
+            text-align: center;
+        }
+        .box-button{
+            display:flex;
+            justify-content: center;
+        }
+        h1{
+            font-size:50px;
+        }
+        #button1{
+            background-color: rgb(231, 82, 107);
+            color:white;
+            width:200px;
+            height: 50px;
+            border:none;
+            border-radius: 10px;
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        #button2{
+            background-color: green;
+            color:white;
+            width:100px;
+            height: 50px;
+            border:none;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Counter</h1>
+        <h2 name="count">{{session['addVisit']}} time</h2>
+        <div class="box-button">
+            <form action="/countVisit" method="post">
+            <input type="submit"  id="button1" name="addVisit" value="Add tow visit">
+            </form>
+            <form action="/resetVisit" method="post">
+            <input type="submit" id="button2" name="reset" value="Reset">
+            </form>
+            
+        </div>
+    </div>
+</body>
+</html>
